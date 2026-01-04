@@ -14,10 +14,8 @@ use std::{io, time::Duration};
 
 struct App {
     branches: Vec<String>,
-    current_branch_index: usize,
     repo_path: String,
     state: ListState,
-    should_quit: bool,
     message: Option<String>,
     is_error: bool,
 }
@@ -36,10 +34,8 @@ impl App {
 
         Ok(Self {
             branches,
-            current_branch_index: current_index,
             repo_path,
             state,
-            should_quit: false,
             message: None,
             is_error: false,
         })
