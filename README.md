@@ -29,6 +29,15 @@ cd git-checkout
 cargo install --path .
 ```
 
+### Using Docker
+
+You can also run the tool using Docker:
+
+```bash
+docker build -t git-checkout .
+docker run -it --rm -v "$(pwd)":/app git-checkout git-checkout
+```
+
 ## Usage
 
 Simply run the tool in any git repository:
